@@ -1,0 +1,30 @@
+{
+	"name": "poetry3-poetry-pyenv",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	//Mkdocs port
+	"forwardPorts": [8000], 
+
+	"postCreateCommand": "poetry install && poetry run mkdocs serve",
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+        "vscode": {
+            "extensions":[
+				"ms-python.python",
+				"PKief.material-icon-theme",
+				"yzhang.markdown-all-in-one",
+				"ms-python.vscode-pylance",
+				"DavidAnson.vscode-markdownlint",
+				"ms-azuretools.vscode-docker",
+				"ms-toolsai.jupyter",
+				"ms-python.isort"
+			]
+            }
+		},
+		"features": {
+			"ghcr.io/devcontainers-contrib/features/mkdocs:2": {}
+		}
+
+}

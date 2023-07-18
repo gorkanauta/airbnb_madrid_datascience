@@ -1,0 +1,20 @@
+site_name: Prueba Técnica - Data Scientist
+nav:
+  - Enunciado: 'evaluation_v_0.0.1.md'
+  - Configuración del Proyecto: 'configuracion_del_proyecto.md'
+  - Análisis Exploratorio de Datos (EDA): "madrid_airbnb_eda.ipynb"
+  - Predicción de Precios: 'madrid_airbnb_price_prediction.ipynb'
+  - Despliegue: 'despliegue.md'
+theme:
+  name: 'material'
+  palette:
+    scheme: 'slate'
+plugins:
+  - mkdocs-jupyter:
+      show_input: False
+      no_input: True
+  - search
+  - mkdocs-simple-hooks:
+      hooks:
+        on_page_content: "hooks:convert_plotly"
+        on_post_build: "hooks:clean_search"
